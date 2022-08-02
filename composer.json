@@ -1,0 +1,53 @@
+{
+  "name": "b13/sitemap-inspector",
+  "description": "TYPO3 Extension that compares 2 XML sitemaps",
+  "keywords": ["typo3", "sitemap.xml", "compare"],
+  "homepage": "https://b13.com/",
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Benni Mack",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "general": "https://github.com/b13/sitemap-inspector/",
+    "issues": "https://github.com/b13/sitemap-inspector/issues/"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
+    }
+  },
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "typo3/cms-core": "^10.0 || ^11.0"
+  },
+  "require-dev": {
+    "typo3/testing-framework": "^6",
+    "phpunit/phpunit": "^8.4",
+    "typo3/cms-core": "^10",
+    "typo3/tailor": "^1.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "sitemap_inspector"
+    }
+  },
+  "require": {
+    "vipnytt/sitemapparser": "^1.1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "B13\\SitemapInspector\\": "Classes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "B13\\SitemapInspector\\Tests\\": "Tests/"
+    }
+  }
+}

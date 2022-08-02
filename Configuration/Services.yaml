@@ -1,0 +1,29 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  B13\SitemapInspector\:
+    resource: '../Classes/*'
+
+  B13\SitemapInspector\Command\CompareSitemapsCommand:
+    tags:
+      - name: 'console.command'
+        command: 'sitemap:compare'
+        description: 'Compare sitemap.xmls of two sites'
+        schedulable: false
+
+  B13\SitemapInspector\Command\DumpSitemapCommand:
+    tags:
+      - name: 'console.command'
+        command: 'sitemap:dump'
+        description: 'Export all URLs of a sitemap.xml'
+        schedulable: false
+
+  B13\SitemapInspector\Command\ListSitesCommand:
+    tags:
+      - name: 'console.command'
+        command: 'sitemap:list-sites'
+        description: 'Show base URLs for sites'
+        schedulable: false

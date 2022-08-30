@@ -27,3 +27,10 @@ services:
         command: 'sitemap:list-sites'
         description: 'Show base URLs for sites'
         schedulable: false
+
+  B13\SitemapInspector\Command\ValidateSitemapCommand:
+    tags:
+      - name: 'console.command'
+        command: 'sitemap:validate'
+        description: 'Call all Urls in a sitemap and list non 200 Responses'
+        schedulable: true
